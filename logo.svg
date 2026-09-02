@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kunta Bay Resort">
+  <title>Kunta Bay Resort</title>
+
+  <defs>
+    <clipPath id="disc"><circle cx="256" cy="256" r="240"/></clipPath>
+  </defs>
+
+  <!-- Sand disc with a sea ring. The ring is not decoration: in the chat
+       header this mark is contained on a white circle, and without it the
+       sand edge disappears into the white. On the launcher pill, which is
+       filled with the sea colour, the sand is what makes it visible. The
+       canvas corners stay transparent so the pill shows through. -->
+  <circle cx="256" cy="256" r="240" fill="#f4efe4"/>
+
+  <g clip-path="url(#disc)">
+    <!-- The sun, setting rather than floating, drawn before the water so the
+         water passes in front of it. -->
+    <circle cx="256" cy="300" r="74" fill="#c9622f"/>
+
+    <!-- The bay as a filled body of water, not a line. A stroke here gave a
+         curve under a dot, which at any size above about 40px read as a
+         smiling face rather than a coast. Mass reads as water; a line reads
+         as a mouth. The top edge is curved because a straight one would be
+         any beach anywhere, and the curve is what makes it a bay. -->
+    <path d="M-20 300 Q256 392 532 300 L532 532 L-20 532 Z" fill="#0d5450"/>
+
+    <!-- One hairline inside the water, which is the device the whole site is
+         built on. Inside a filled mass it can only read as a wave. -->
+    <path d="M150 424 Q256 462 362 424" fill="none" stroke="#f4efe4"
+          stroke-width="12" stroke-linecap="round" opacity=".42"/>
+  </g>
+
+  <circle cx="256" cy="256" r="240" fill="none" stroke="#0d5450" stroke-width="16"/>
+</svg>
